@@ -1,0 +1,15 @@
+.store {
+  background-image: url('../../assets/images/pattern1.jpg');
+  background-size: 300px;
+  &-image {
+    overflow: hidden;
+    max-width: 20rem;
+    max-height: 20rem;
+    margin: 1rem 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

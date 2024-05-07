@@ -1,0 +1,111 @@
+@import '../../index.scss';
+
+.menu {
+  background-image: url('../../assets/images/pattern1.jpg');
+  background-size: 300px;
+
+  &-meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    &-meal {
+      display: flex;
+      width: 100%;
+      max-width: 1000px; // TODO: get from page?
+
+      &-title {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 2.5rem !important;
+        // color:$dark-purple !important;
+
+        span {
+          margin: .25rem 1rem;
+          text-align: right;
+          &:nth-child(1) {
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+          }
+          &:nth-child(2) {
+            font-size: 2.5rem;
+            line-height: 2.5rem;;
+          }
+          &:nth-child(3) {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0px;
+            line-height: 1.25rem;
+          }
+        }
+      }
+      &-image {
+        position: relative;
+        overflow: hidden;
+        width: 10rem;
+        height: 10rem;
+        margin: 1rem;
+        border-radius: .5rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &-extras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &-extra {
+      display: flex;
+      width: 100%;
+      max-width: 1000px;
+      
+      &-title {
+        margin: 4rem 1rem !important;
+      }
+      &-image {
+        overflow: hidden;
+        overflow: hidden;
+        width: 10rem;
+        height: 10rem;
+        margin: 1rem;
+        border-radius: .5rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 0%;
+        }
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    &-meals {
+      &-meal {
+        flex-direction: column !important;
+        &-title {
+          align-items: center !important;
+          margin: 1rem 0 0;
+          span {
+            text-align: center !important;
+          }
+        }
+      }
+    }
+  }     
+}

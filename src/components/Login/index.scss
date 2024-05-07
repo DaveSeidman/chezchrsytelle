@@ -1,0 +1,29 @@
+@import '../../index.scss';
+
+.login {
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  width: 16rem;
+  background: white;
+
+  &-user {
+    &-info {
+      display: flex;
+      align-items: center;
+
+      &-image {
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem;
+        background-color: $dark-purple;
+        border-radius: 50%;
+      }
+    }
+    & > a {
+      display: block;
+      margin: .5rem;
+      color: $black;
+    }
+  }
+}

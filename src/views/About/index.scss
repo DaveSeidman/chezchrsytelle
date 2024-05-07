@@ -1,0 +1,54 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../assets/images/pattern2.jpg');
+  background-size: 300px;
+
+  &-main {
+    display: flex;
+    max-width: 1000px;
+    flex-direction: row;
+
+    &-image {
+      height: calc(100vh - 16rem);
+      max-height: 20rem;
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        min-width: 20rem;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 25%;
+      }
+    }
+
+    &-text {
+      margin-left: 2rem;
+    }
+
+    &-instagram {
+
+      overflow: hidden;
+
+      .instagram-media {
+        display: block !important;
+        // overscroll-behavior: contain;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+// TODO: use a variable from root here
+@media screen and (max-width: 768px) {
+  .about {
+    &-main {
+      flex-direction: column;
+      &-text {
+        margin: 0;
+      }
+    }
+  }     
+}

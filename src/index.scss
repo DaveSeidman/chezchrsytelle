@@ -1,0 +1,196 @@
+/* Colors */
+
+$white: rgb(250, 250, 248);
+$beige: rgb(224, 217, 190);
+$dark: rgba(30, 20, 20, .5);
+$dark-purple: rgba(64, 13, 52, 1);
+$black: rgb(10, 5, 5);
+/* Fonts */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src: url('assets/fonts/MontserratAlternates-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  src: url('assets/fonts/MontserratAlternates-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Kaushan Script';
+  font-weight: 400;
+  src: url('assets/fonts/KaushanScript-Regular.ttf');
+}
+
+$nav-height: 4rem;
+
+:root {
+  --app-height: 100%;
+}
+
+html, body, #root {
+  width: 100%; 
+  height: 100dvh;
+  height: var(--app-height);
+
+  padding: 0;
+  margin: 0;
+  background: #eee5e0;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 1.75rem;
+  overflow-x: hidden;
+}
+.app {
+  position: absolute;
+  inset: 0;
+
+  h1, h2, h3 {
+    margin: 0 0 1rem;
+  }
+  h1 {
+    line-height: 3rem !important;
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: underline rgba(255, 255, 255, 0);
+    transition: text-decoration .25s;
+
+    &:hover {
+      text-decoration: underline rgba(255, 255, 255, 1);
+    }
+  }
+
+  p {
+    margin: .25rem;
+  }
+
+  button {
+    padding: 1rem;
+    border: 2px solid $dark-purple;
+    margin: 0 .5rem;
+    background: none;
+    border-radius: .5rem;
+    color: $dark-purple;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    
+    &.primary {
+      background: $dark-purple;
+      color: $white;
+    }
+  }
+
+  input, textarea {
+    padding: .25rem;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+  }
+
+  .modals {
+    position: fixed;
+    background: $dark;
+    inset: 0;
+    pointer-events: none;
+    
+    .modal {
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+      width: calc(100% - 12rem);
+      height: calc(100% - 12rem);
+      padding: 2rem;
+      background: $beige;
+      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+
+      .content {
+        width: 100%;
+        height: calc(100% - 2rem);
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        h3 {
+          margin-top: 2rem;
+        }
+      }
+      pointer-events: initial;
+
+      .close {
+        position: absolute;
+        top: -1.5rem;
+        right: -1.5rem;;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid $dark;
+        background: white;
+        border-radius: 50%;
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .pages {
+    top: $nav-height;
+    left: 0;
+    width: 100%;
+    overflow-x: hidden;
+
+    .page {
+      width: 100%;
+      min-height: 30rem;
+      padding-top: $nav-height;
+
+      &:not(.home) {
+        width: calc(100vw - 4rem);
+        // margin: 0 2rem;
+        padding: 2rem;
+      }
+
+      h2 {
+        margin-top: 4rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    h1, h2, a, p {
+      color: rgb(130, 65, 15);
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  .EmbedProfile {
+    outline: 3px solid red;
+  }
+
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.dont-break {
+  white-space: nowrap;
+}
+
+.dont-transition {
+  transition: none;
+}
+.instagram-media {
+  display: none !important;
+}

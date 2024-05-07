@@ -1,0 +1,26 @@
+@import '../../index.scss';
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: 15rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: $dark-purple;
+  color: white;
+
+  &-socials {
+    display: flex;
+    &-social {
+      display: block;
+      width: 2rem;
+      height: 2rem; 
+      margin: .5rem;
+      background-size: 100%;
+      &.instagram {  background-image: url('../../assets/images/instagram.svg'); }
+      &.facebook {  background-image: url('../../assets/images/facebook.svg'); }
+      &.youtube {  background-image: url('../../assets/images/youtube.svg'); }
+    }
+  }
+}

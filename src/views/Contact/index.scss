@@ -1,0 +1,19 @@
+.contact {
+  background-image: url('../../assets/images/pattern2.jpg');
+  background-size: 300px;
+  &-main {
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        margin: .5rem 1rem;
+      }
+
+      textarea {
+        height: 10rem;
+        margin: .5rem 0;
+      }
+    }
+  }
+}
