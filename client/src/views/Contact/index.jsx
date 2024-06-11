@@ -11,7 +11,7 @@ function Contact() {
     <div className="page contact" id="contact">
       <h2>Contact</h2>
       <div className="contact-main">
-        <a href="mailto:bonjour@chezchrystelle.com">bonjour@chezchrystelle.com</a>
+        <a href="mailto:chrystelleseidman@gmail.com">chrystelleseidman@gmail.com</a>
         <form>
           <label>Your name:<input type="text" /></label>
           <label>Your email:<input type="text" /></label>

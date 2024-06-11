@@ -56,12 +56,12 @@ function Home() {
   };
 
   const handlePointerEnter = () => {
-    console.log('in');
+    // console.log('in');
     setActive(true);
   };
 
   const handlePointerLeave = () => {
-    console.log('out');
+    // console.log('out');
     setActive(false);
   };
 
