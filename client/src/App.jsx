@@ -66,6 +66,18 @@ function App() {
 
   const { user, setStoreUser } = useStore();
 
+  if (window.location.hostname === 'krupa.chezchrystelle.com') {
+    return (
+      <div style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSex_Tdom02yhhUyOTQVEli0hyTSA6TAFfXBQLmyoSXDoVmNCQ/viewform?usp=header"
+          style={{ width: '100%', height: '100%', border: 'none' }}
+          title="Krupa Form"
+        />
+      </div>
+    );
+  }
+
 
   const handleScroll = () => {
     // setAtTop(Math.abs(pages.current.getBoundingClientRect().top) < 200);
